@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Bebas+Neue&display=swap');
+@import "tailwindcss";
+
+:root {
+  --background: #FFE200;
+  --foreground: #000000;
+  --accent-purple: #9d33fb;
+  --accent-green: #37eb42;
+  --black-stroke: #000000;
+}
+
+@theme inline {
+  --color-background: #f8fafc;
+  --color-foreground: #020617;
+  --color-neublue: #0ea5e9;
+  --color-neuyellow: #FFE200;
+  --color-neupurple: #8b5cf6;
+  --color-neugreen: #10b981;
+}
+
+h1, h2, h3, h4, .font-archivo, .font-bebas {
+  font-family: 'Bebas Neue', sans-serif !important;
+  letter-spacing: 0.05em;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Space Grotesk', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Neubrutalism Helper Utilities */
+.neo-border {
+  border: 4px solid #000;
+}
+
+.neo-shadow {
+  box-shadow: 4px 4px 0px 0px #000;
+}
+
+.neo-shadow-lg {
+  box-shadow: 8px 8px 0px 0px #000;
+}
+
+.neo-shadow-active {
+  box-shadow: 0px 0px 0px 0px #000;
+  transform: translate(4px, 4px);
+}
+
+/* Grid Pattern Background */
+.bg-neo-grid {
+  background-image: radial-gradient(circle, #00000022 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.bg-neo-lines {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  animation: move-grid 30s linear infinite;
+}
+
+@keyframes move-grid {
+  from { background-position: 0 0; }
+  to { background-position: 40px 40px; }
+}
